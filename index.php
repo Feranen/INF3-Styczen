@@ -1,7 +1,3 @@
-<?php
-session_start();  // Start the session
-?>
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -29,16 +25,7 @@ session_start();  // Start the session
             </div>
         </div>
         <div class="down">
-            <!-- Display message from PHP after form submission -->
-            <?php
-            // Include the PHP file to process the form and display the message
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                include 'php/rezerwacja.php'; // Process the form and show the message
-                echo "<p class='message'>$message</p>"; // Display the message
-            }
-            ?>
-
-            <form action="index.php" method="post">
+            <form action="" class="form" method="post">
                 <h2>Zarezerwuj stolik on-line</h2>
                 <div class="osoby">
                     <label for="Data">Data (format rrrr-mm-dd)</label>
@@ -59,6 +46,10 @@ session_start();  // Start the session
                     <button type="reset">WYCZYŚĆ</button>
                     <button type="submit">REZERWUJ</button>
             </form>
+                <!-- Display the message here if there is one -->
+                <?php include 'php/rezerwacja.php'; if ($message != ""): ?>
+                <div class="message"></div>
+                <?php endif; ?>
         </div>
     </div>
     <div class="footer">
