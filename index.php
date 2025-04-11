@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="down">
-            <form action="" class="form" method="post">
+            <form action="php/rezerwacja.php" class="form" method="post">
                 <h2>Zarezerwuj stolik on-line</h2>
                 <div class="osoby">
                     <label for="Data">Data (format rrrr-mm-dd)</label>

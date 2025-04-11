@@ -11,6 +11,11 @@ if ($conn->connect_error) {
 
 $message = ""; // Variable to store the message
 
+/*
+
+*/
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Date = $_POST["Data"];
     $Osoby = trim($_POST["Osoby"]);
